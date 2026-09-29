@@ -2,6 +2,7 @@ import steelDoor from "@/assets/steel-door.jpg";
 import woodDoor from "@/assets/wood-door.jpg";
 import aluminiumDoor from "@/assets/aluminium-door.jpg";
 import heroImage from "@/assets/willmore-hero.jpg";
+import upvcDoor from "@/assets/upvc-door.jpg";
 
 export { heroImage };
 
@@ -34,7 +35,7 @@ export const products = [
     no: "04",
     name: "Pintu PVC & UPVC",
     slug: "pvc-upvc",
-    image: heroImage,
+    image: upvcDoor,
     summary: "Solusi praktis untuk kebutuhan ruang yang mengutamakan kemudahan perawatan.",
     points: ["Mudah dirawat", "Pilihan sesuai fungsi ruang", "Konsultasi material tersedia"],
   },
@@ -60,4 +61,11 @@ export const faqs = [
 export const marketplaces = [
   { name: "Shopee", url: "https://shopee.co.id/willmore", className: "marketplace-shopee" },
   { name: "Tokopedia", url: "https://www.tokopedia.com/willmore-official", className: "marketplace-tokopedia" },
+] as const;
+
+export const socials = [
+  { id: "instagram", name: "Instagram", handle: "@willmoreofficial", url: "https://www.instagram.com/willmoreofficial" },
+  { id: "tiktok", name: "TikTok", handle: "@pintuwillmore", url: "https://www.tiktok.com/@pintuwillmore" },
+  { id: "facebook", name: "Facebook", handle: "WillmoreOfficial1", url: "https://www.facebook.com/WillmoreOfficial1" },
+  { id: "youtube", name: "YouTube", handle: "@willmoreofficial", url: "https://www.youtube.com/@willmoreofficial" },
 ] as const;

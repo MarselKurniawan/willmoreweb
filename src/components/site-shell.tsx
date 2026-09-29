@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { SocialLinks } from "@/components/social-links";
 import logoAsset from "@/assets/logo-willmore.png.asset.json";
 
 const navigation = [
@@ -8,6 +9,7 @@ const navigation = [
   { to: "/tentang", label: "Tentang" },
   { to: "/produk", label: "Produk" },
   { to: "/layanan", label: "Layanan" },
+  { to: "/artikel", label: "Artikel" },
   { to: "/kontak", label: "Kontak" },
 ] as const;
 
@@ -44,7 +46,8 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <img src={logoAsset.url} alt="Willmore" width={360} height={70} />
-        <div><Link to="/produk">Produk</Link><Link to="/layanan">Layanan</Link><Link to="/tentang">Tentang</Link></div>
+        <div><Link to="/produk">Produk</Link><Link to="/layanan">Layanan</Link><Link to="/tentang">Tentang</Link><Link to="/artikel">Artikel</Link></div>
+        <SocialLinks variant="dark" />
         <p>© 2026 Willmore<br />High Quality Door Specialist</p>
       </div>
     </footer>
