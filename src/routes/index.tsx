@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { PageShell, ArrowLink } from "@/components/site-shell";
-import { SectionHeading } from "@/components/page-sections";
-import { heroImage, products, services, faqs } from "@/lib/site-content";
+import { FaqSection, MarketplaceBanner, SectionHeading } from "@/components/page-sections";
+import { heroImage, products, services } from "@/lib/site-content";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -51,9 +51,7 @@ function HomePage() {
       <ArrowLink to="/layanan">Pelajari layanan</ArrowLink>
     </section>
 
-    <section className="section-pad faq-section">
-      <SectionHeading number="03" label="Pertanyaan Umum" title="Hal penting sebelum memilih pintu." />
-      <div className="faq-list">{faqs.map(([question, answer], index) => <details key={question}><summary><span>{String(index+1).padStart(2,"0")}</span>{question}<b>+</b></summary><p>{answer}</p></details>)}</div>
-    </section>
+    <MarketplaceBanner />
+    <FaqSection number="03" />
   </PageShell>;
 }
