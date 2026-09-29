@@ -6,38 +6,42 @@ import upvcDoor from "@/assets/upvc-door.jpg";
 
 export { heroImage };
 
+export const whatsappNumber = "6281227281454";
+export const completeSetNote = "Setiap pembelian sudah termasuk satu set lengkap kusen dan handle, siap dipasang.";
+
 export const products = [
   {
     no: "01",
     name: "Pintu Baja",
     slug: "baja",
     image: steelDoor,
-    summary: "Pilihan untuk kebutuhan keamanan, ketahanan, dan tampilan rumah modern.",
-    points: ["Kokoh untuk akses utama", "Pilihan desain minimalis", "Dapat disesuaikan dengan kebutuhan ruang"],
+    summary: "Pintu baja premium dengan motif serat kayu yang sangat natural, dirancang untuk keamanan, ketahanan, dan tampilan rumah modern.",
+    points: ["Tahan air dan cuaca", "11 titik penguncian untuk keamanan berlapis", "Architrave menutup celah agar hasil lebih rapi", "Peredam pada sela pintu", "Satu set lengkap kusen dan handle"],
   },
   {
     no: "02",
     name: "Pintu Kayu",
     slug: "kayu",
     image: woodDoor,
-    summary: "Karakter natural dan hangat untuk hunian yang mengutamakan detail.",
-    points: ["Karakter serat yang khas", "Pilihan untuk rumah modern", "Opsi desain sesuai kebutuhan"],
+    summary: "Pintu kayu premium berlapis HMR dengan ketebalan 4,2 cm untuk karakter yang lebih kuat, kokoh, dan tahan rayap.",
+    points: ["Lapisan HMR, bukan HPL", "Ketebalan premium 4,2 cm", "Architrave untuk hasil akhir yang rapi", "Lebih tahan terhadap rayap", "Satu set lengkap kusen dan handle"],
   },
   {
     no: "03",
     name: "Pintu Aluminium",
     slug: "aluminium",
     image: aluminiumDoor,
-    summary: "Profil bersih dan ringan untuk bukaan modern serta koneksi antarruang.",
-    points: ["Tampilan ramping", "Cocok untuk bukaan lebar", "Perawatan praktis"],
+    summary: "Pintu yang tidak berkarat untuk teras, area outdoor, dan kamar mandi, dengan jaminan warna hingga 10 tahun.",
+    points: ["Tidak akan berkarat", "Garansi 10 tahun tidak berubah warna", "Cocok untuk teras outdoor dan kamar mandi", "Sudah teruji", "Satu set lengkap kusen dan handle"],
+    badge: "Sudah Teruji",
   },
   {
     no: "04",
     name: "Pintu PVC & UPVC",
     slug: "pvc-upvc",
     image: upvcDoor,
-    summary: "Solusi praktis untuk kebutuhan ruang yang mengutamakan kemudahan perawatan.",
-    points: ["Mudah dirawat", "Pilihan sesuai fungsi ruang", "Konsultasi material tersedia"],
+    summary: "Pilihan PVC kelas atas dan UPVC bergaransi untuk area interior hingga semi-outdoor dengan kualitas yang sepadan dengan harganya.",
+    points: ["UPVC bergaransi bahan 10 tahun", "UPVC tidak getas, lentur, dan tahan keropos", "UPVC dilengkapi handle serta dapat dikunci", "PVC grade atas dengan harga yang tetap sepadan", "Satu set lengkap kusen dan handle"],
   },
 ] as const;
 
