@@ -52,4 +52,12 @@ export const faqs = [
   ["Apakah Willmore menyediakan pemasangan?", "Ya. Layanan Willmore mencakup konsultasi, pemilihan produk, instalasi, hingga after sales."],
   ["Apakah tersedia pintu custom?", "Kebutuhan desain dan ukuran dapat dibahas saat konsultasi agar pilihan produknya sesuai dengan kondisi ruang."],
   ["Bagaimana cara mengetahui harga pintu?", "Harga dipengaruhi material, ukuran, desain, finishing, dan kebutuhan pemasangan. Sampaikan kebutuhan proyek melalui halaman kontak untuk mendapatkan arahan yang sesuai."],
+  ["Apa perbedaan pintu baja, kayu, aluminium, dan UPVC?", "Pintu baja mengutamakan keamanan dan ketahanan, kayu menghadirkan karakter natural, aluminium cocok untuk tampilan ramping dan bukaan lebar, sedangkan PVC dan UPVC praktis dalam perawatan."],
+  ["Apakah saya bisa berkonsultasi sebelum memilih produk?", "Ya. Konsultasi membantu Anda membandingkan material berdasarkan fungsi ruang, gaya rumah, kebutuhan keamanan, dan perawatannya."],
+  ["Apakah Willmore memiliki layanan setelah pemasangan?", "Ya. Willmore menyediakan layanan after sales untuk mendampingi kebutuhan pelanggan setelah pintu terpasang."],
+] as const;
+
+export const marketplaces = [
+  { name: "Shopee", url: "https://shopee.co.id/willmore", className: "marketplace-shopee" },
+  { name: "Tokopedia", url: "https://www.tokopedia.com/willmore-official", className: "marketplace-tokopedia" },
 ] as const;
