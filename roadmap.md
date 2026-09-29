@@ -9,4 +9,4 @@
 - [x] Verify the updated desktop and mobile presentation
 - [x] Send contact form enquiries to Willmore WhatsApp
 - [x] Add verified product specifications and complete-set details
-- [ ] Verify WhatsApp form, product badges, and updated article pages
+- [x] Verify WhatsApp form, product badges, and updated article pages
