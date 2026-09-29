@@ -131,6 +131,9 @@ details p { margin: 0 4rem 1.8rem; max-width: 45rem; line-height: 1.7; color: va
 .principles h3 { font-size: 2rem; margin: 5rem 0 1rem; font-weight: 500; }
 .principles p { line-height: 1.6; }
 .catalog { padding: 2rem 4vw 9rem; }
+.complete-set-note { padding: 2rem 4vw; display: grid; grid-template-columns: 1fr 2.4fr; gap: 8vw; border-bottom: 1px solid var(--border); background: var(--accent); }
+.complete-set-note span { font-size: .68rem; font-weight: 700; text-transform: uppercase; }
+.complete-set-note p { margin: 0; font-size: 1.05rem; font-weight: 600; }
 .catalog-item { display: grid; grid-template-columns: 1.45fr 1fr; gap: 7vw; padding: 5rem 0; border-bottom: 1px solid var(--border); align-items: center; }
 .catalog-item:nth-child(even) .catalog-image { order: 2; }
 .catalog-image { height: min(70vh, 48rem); position: relative; overflow: hidden; }
@@ -139,6 +142,7 @@ details p { margin: 0 4rem 1.8rem; max-width: 45rem; line-height: 1.7; color: va
 .catalog-image span { position: absolute; left: 1rem; top: 1rem; background: var(--background); padding: .5rem .7rem; font-size: .7rem; }
 .catalog-copy h2 { font-size: clamp(2.4rem, 5vw, 5rem); line-height: 1; font-weight: 500; margin: 0 0 2rem; }
 .catalog-copy p { max-width: 34rem; line-height: 1.8; color: var(--muted-foreground); }
+.tested-badge { display: inline-flex; align-items: center; width: fit-content; padding: .45rem .65rem; margin-bottom: 1.25rem; background: var(--primary); color: var(--primary-foreground); font-size: .68rem; font-weight: 700; text-transform: uppercase; }
 .catalog-copy ul, .contact-layout aside ul { padding: 0; margin: 2rem 0 0; list-style: none; }
 .catalog-copy li, .contact-layout aside li { padding: .8rem 0; border-top: 1px solid var(--border); font-size: .82rem; }
 .inline-cta { padding: 6rem 4vw; background: var(--accent); display: flex; justify-content: space-between; align-items: end; gap: 2rem; }
@@ -210,6 +214,7 @@ h1, h2, h3 { text-transform: uppercase; }
   .principles > div { padding: 3.5rem 1.25rem; border-right: 0; border-bottom: 1px solid color-mix(in oklab, var(--foreground) 25%, transparent); }
   .principles h3 { margin-top: 3rem; }
   .catalog { padding: 1rem 1.25rem 5rem; }
+  .complete-set-note { padding: 1.75rem 1.25rem; grid-template-columns: 1fr; gap: .75rem; }
   .catalog-item { grid-template-columns: 1fr; padding: 3.5rem 0; gap: 2rem; }
   .catalog-item:nth-child(even) .catalog-image { order: 0; }
   .catalog-image { height: auto; aspect-ratio: 4/5; }
