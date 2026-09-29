@@ -14,6 +14,8 @@ import { Route as KontakRouteImport } from './routes/kontak'
 import { Route as LayananRouteImport } from './routes/layanan'
 import { Route as ProdukRouteImport } from './routes/produk'
 import { Route as TentangRouteImport } from './routes/tentang'
+import { Route as ArtikelIndexRouteImport } from './routes/artikel.index'
+import { Route as ArtikelSlugRouteImport } from './routes/artikel.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +42,16 @@ const TentangRoute = TentangRouteImport.update({
   path: '/tentang',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArtikelIndexRoute = ArtikelIndexRouteImport.update({
+  id: '/artikel/',
+  path: '/artikel/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtikelSlugRoute = ArtikelSlugRouteImport.update({
+  id: '/artikel/$slug',
+  path: '/artikel/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/layanan': typeof LayananRoute
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
+  '/artikel/$slug': typeof ArtikelSlugRoute
+  '/artikel/': typeof ArtikelIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/layanan': typeof LayananRoute
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
+  '/artikel/$slug': typeof ArtikelSlugRoute
+  '/artikel': typeof ArtikelIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +78,37 @@ export interface FileRoutesById {
   '/layanan': typeof LayananRoute
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
+  '/artikel/$slug': typeof ArtikelSlugRoute
+  '/artikel/': typeof ArtikelIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontak' | '/layanan' | '/produk' | '/tentang'
+  fullPaths:
+    | '/'
+    | '/kontak'
+    | '/layanan'
+    | '/produk'
+    | '/tentang'
+    | '/artikel/$slug'
+    | '/artikel/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontak' | '/layanan' | '/produk' | '/tentang'
-  id: '__root__' | '/' | '/kontak' | '/layanan' | '/produk' | '/tentang'
+  to:
+    | '/'
+    | '/kontak'
+    | '/layanan'
+    | '/produk'
+    | '/tentang'
+    | '/artikel/$slug'
+    | '/artikel'
+  id:
+    | '__root__'
+    | '/'
+    | '/kontak'
+    | '/layanan'
+    | '/produk'
+    | '/tentang'
+    | '/artikel/$slug'
+    | '/artikel/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +117,8 @@ export interface RootRouteChildren {
   LayananRoute: typeof LayananRoute
   ProdukRoute: typeof ProdukRoute
   TentangRoute: typeof TentangRoute
+  ArtikelSlugRoute: typeof ArtikelSlugRoute
+  ArtikelIndexRoute: typeof ArtikelIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TentangRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/artikel/': {
+      id: '/artikel/'
+      path: '/artikel'
+      fullPath: '/artikel/'
+      preLoaderRoute: typeof ArtikelIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/artikel/$slug': {
+      id: '/artikel/$slug'
+      path: '/artikel/$slug'
+      fullPath: '/artikel/$slug'
+      preLoaderRoute: typeof ArtikelSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   LayananRoute: LayananRoute,
   ProdukRoute: ProdukRoute,
   TentangRoute: TentangRoute,
+  ArtikelSlugRoute: ArtikelSlugRoute,
+  ArtikelIndexRoute: ArtikelIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
