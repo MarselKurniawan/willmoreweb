@@ -468,3 +468,5 @@ export const articles: Article[] = [
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);
 export const wordCount = (a: Article) =>
   [...a.intro, ...a.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])].join(" ").split(/\s+/).length;
+import { recommendationArticles } from "@/lib/articles-rekomendasi";
+articles.push(...recommendationArticles);
