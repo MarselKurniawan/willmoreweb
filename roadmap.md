@@ -10,3 +10,6 @@
 - [x] Send contact form enquiries to Willmore WhatsApp
 - [x] Add verified product specifications and complete-set details
 - [x] Verify WhatsApp form, product badges, and updated article pages
+- [ ] Replace homepage photo and shared logo with the supplied images
+- [ ] Make the navigation fixed at the top with translucent blur
+- [ ] Install Meta Pixel and Google Tag Manager sitewide and verify
