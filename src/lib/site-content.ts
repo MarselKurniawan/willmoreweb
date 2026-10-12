@@ -73,3 +73,58 @@ export const socials = [
   { id: "facebook", name: "Facebook", handle: "WillmoreOfficial1", url: "https://www.facebook.com/WillmoreOfficial1" },
   { id: "youtube", name: "YouTube", handle: "@willmoreofficial", url: "https://www.youtube.com/@willmoreofficial" },
 ] as const;
+
+export const categories = [
+  {
+    slug: "baja", name: "Pintu Baja", image: steelDoor,
+    metaTitle: "Pintu Baja Willmore | Motif Kayu Natural, 11 Titik Kunci",
+    description: "Pintu baja Willmore bermotif serat kayu natural, tahan air dan cuaca, 11 titik penguncian, architrave, dan peredam. Satu set lengkap siap pasang.",
+    intro: "Pintu baja Willmore menggabungkan keamanan baja dengan motif serat kayu yang paling natural, sehingga cocok sebagai pintu utama rumah modern.",
+    specs: [["Material", "Baja"], ["Finishing", "Motif serat kayu natural"], ["Keamanan", "11 titik penguncian"], ["Ketahanan", "Tahan air dan cuaca"], ["Detail", "Architrave dan peredam di sela pintu"], ["Paket", "Daun pintu, kusen, dan handle"]],
+    uses: ["Pintu utama rumah", "Pintu samping atau garasi", "Area yang terkena cuaca"],
+    faqs: [["Apakah pintu baja Willmore tahan cuaca?", "Ya. Pintu baja Willmore tahan air dan cuaca sehingga cocok untuk pintu utama."], ["Apa fungsi architrave?", "Architrave menutup celah antara kusen dan dinding sehingga hasil pemasangan lebih rapi dan tidak terlihat lubang."], ["Berapa titik penguncian pintu baja Willmore?", "Pintu baja Willmore memiliki 11 titik penguncian."]],
+    articles: ["panduan-memilih-pintu-baja", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-utama-rumah"],
+  },
+  {
+    slug: "kayu", name: "Pintu Kayu", image: woodDoor,
+    metaTitle: "Pintu Kayu Willmore | Lapisan HMR, Tebal 4,2 cm, Tahan Rayap",
+    description: "Pintu kayu Willmore berlapis HMR (bukan HPL), tebal 4,2 cm di atas standar 3,5 cm, lebih tahan rayap, dengan architrave. Satu set lengkap siap pasang.",
+    intro: "Pintu kayu Willmore dibuat lebih tebal dari standar dan memakai lapisan HMR agar lebih kuat, kokoh, dan tahan rayap.",
+    specs: [["Lapisan", "HMR, bukan HPL"], ["Ketebalan", "4,2 cm (standar umum 3,5 cm)"], ["Ketahanan", "Lebih tahan rayap"], ["Detail", "Architrave untuk hasil rapi"], ["Paket", "Daun pintu, kusen, dan handle"]],
+    uses: ["Pintu kamar tidur", "Pintu ruang kerja", "Pintu interior bernuansa hangat"],
+    faqs: [["Apa beda lapisan HMR dan HPL?", "Willmore memakai lapisan HMR, bukan HPL, sehingga pintu kayu lebih tahan rayap."], ["Berapa ketebalan pintu kayu Willmore?", "4,2 cm, di atas ketebalan standar umum 3,5 cm, sehingga lebih kuat dan kokoh."]],
+    articles: ["panduan-memilih-pintu-kayu", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-rumah-terbaik"],
+  },
+  {
+    slug: "aluminium", name: "Pintu Aluminium", image: aluminiumDoor,
+    metaTitle: "Pintu Aluminium Willmore | Anti Karat, Garansi Warna 10 Tahun",
+    description: "Pintu aluminium Willmore tidak berkarat, garansi 10 tahun tidak berubah warna dan sudah teruji. Cocok untuk teras outdoor dan kamar mandi.",
+    intro: "Pintu aluminium Willmore dirancang untuk area basah dan luar ruangan: tidak akan berkarat dan warnanya bergaransi 10 tahun.",
+    specs: [["Material", "Aluminium"], ["Ketahanan", "Tidak berkarat"], ["Garansi", "10 tahun tidak berubah warna"], ["Status", "Sudah teruji"], ["Paket", "Daun pintu, kusen, dan handle"]],
+    uses: ["Pintu teras outdoor", "Pintu kamar mandi", "Area basah dan lembap"],
+    faqs: [["Apakah pintu aluminium Willmore bisa berkarat?", "Tidak. Pintu aluminium Willmore tidak akan berkarat."], ["Apa garansi pintu aluminium Willmore?", "Garansi 10 tahun warna tidak berubah, dan sudah teruji."]],
+    articles: ["panduan-memilih-pintu-aluminium", "rekomendasi-pintu-aluminium-rumah-minimalis", "rekomendasi-pintu-kamar-mandi"],
+  },
+  {
+    slug: "upvc", name: "Pintu UPVC", image: upvcDoor,
+    metaTitle: "Pintu UPVC Willmore | Garansi Bahan 10 Tahun, Bisa Dikunci",
+    description: "Pintu UPVC Willmore bergaransi bahan 10 tahun, tidak getas, lentur, tahan keropos, dilengkapi handle kunci, cocok semi outdoor. Satu set siap pasang.",
+    intro: "Tidak banyak pintu UPVC yang dilengkapi handle kunci. Pintu UPVC Willmore bisa dikunci dan cocok untuk area semi outdoor.",
+    specs: [["Material", "UPVC"], ["Garansi", "10 tahun bahan"], ["Karakter", "Tidak getas, lentur, tahan keropos"], ["Kunci", "Dilengkapi handle dan bisa dikunci"], ["Penggunaan", "Interior hingga semi outdoor"], ["Paket", "Daun pintu, kusen, dan handle"]],
+    uses: ["Pintu kamar mandi", "Pintu dapur atau area servis", "Area semi outdoor"],
+    faqs: [["Apakah pintu UPVC Willmore bisa dikunci?", "Bisa. Pintu UPVC Willmore dilengkapi handle kunci."], ["Berapa garansi pintu UPVC Willmore?", "Garansi bahan 10 tahun."]],
+    articles: ["panduan-memilih-pintu-pvc-upvc", "pintu-upvc-vs-pvc", "rekomendasi-pintu-kamar-mandi"],
+  },
+  {
+    slug: "pvc", name: "Pintu PVC", image: upvcDoor,
+    metaTitle: "Pintu PVC Willmore | Grade Atas, Worth It, Tidak Overprice",
+    description: "Pintu PVC Willmore grade atas: harga paling terjangkau di koleksi Willmore dengan kualitas sepadan, tidak overprice. Satu set lengkap kusen dan handle.",
+    intro: "Pintu PVC Willmore adalah pilihan paling terjangkau di koleksi kami, tetapi tetap memakai PVC grade atas — bukan yang murahan.",
+    specs: [["Material", "PVC grade atas"], ["Nilai", "Worth it, tidak overprice"], ["Penggunaan", "Interior"], ["Paket", "Daun pintu, kusen, dan handle"]],
+    uses: ["Pintu kamar mandi interior", "Pintu gudang atau ruang servis", "Renovasi dengan anggaran efisien"],
+    faqs: [["Apakah pintu PVC Willmore murahan?", "Tidak. Willmore memakai PVC grade atas; harganya paling terjangkau di koleksi kami tetapi kualitasnya sepadan."], ["Apa beda PVC dan UPVC?", "UPVC bergaransi bahan 10 tahun, lentur, dan bisa dikunci untuk semi outdoor; PVC grade atas adalah pilihan interior yang paling terjangkau."]],
+    articles: ["pintu-upvc-vs-pvc", "panduan-memilih-pintu-pvc-upvc", "rekomendasi-pintu-kamar-mandi"],
+  },
+] as const;
+
+export const getCategory = (slug: string) => categories.find((c) => c.slug === slug);
