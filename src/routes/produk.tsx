@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, ArrowLink } from "@/components/site-shell";
 import { FaqSection, MarketplaceBanner, PageIntro } from "@/components/page-sections";
 import { completeSetNote, products } from "@/lib/site-content";
-export const Route = createFileRoute("/produk")({ head: () => ({ meta: [
+export const Route = createFileRoute("/produk")({ staticData: { sitemap: true }, head: () => ({ meta: [
   { title: "Produk Pintu Willmore | Baja, Kayu, Aluminium, PVC & UPVC" }, { name: "description", content: "Jelajahi pilihan pintu baja, kayu, aluminium, PVC dan UPVC Willmore untuk kebutuhan rumah modern." },
   { property: "og:title", content: "Produk Pintu Willmore" }, { property: "og:description", content: "Pilihan material pintu untuk keamanan, karakter, dan fungsi ruang." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ]}), component: ProductsPage });
