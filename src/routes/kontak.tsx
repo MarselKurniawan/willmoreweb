@@ -3,7 +3,7 @@ import { PageShell } from "@/components/site-shell";
 import { PageIntro } from "@/components/page-sections";
 import { SocialLinks } from "@/components/social-links";
 import { whatsappNumber } from "@/lib/site-content";
-export const Route = createFileRoute("/kontak")({ head: () => ({ meta: [
+export const Route = createFileRoute("/kontak")({ staticData: { sitemap: true }, head: () => ({ meta: [
   { title: "Kontak Willmore | Konsultasi Kebutuhan Pintu" }, { name: "description", content: "Ceritakan kebutuhan pintu rumah atau proyek Anda kepada Willmore untuk memulai konsultasi." },
   { property: "og:title", content: "Konsultasi Pintu dengan Willmore" }, { property: "og:description", content: "Mulai pembicaraan tentang material, ukuran, desain, dan pemasangan pintu." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ]}), component: ContactPage });

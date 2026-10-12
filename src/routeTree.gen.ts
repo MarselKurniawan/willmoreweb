@@ -16,6 +16,7 @@ import { Route as ProdukRouteImport } from './routes/produk'
 import { Route as TentangRouteImport } from './routes/tentang'
 import { Route as ArtikelIndexRouteImport } from './routes/artikel.index'
 import { Route as ArtikelSlugRouteImport } from './routes/artikel.$slug'
+import { Route as PintuSlugRouteImport } from './routes/pintu.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -52,6 +53,11 @@ const ArtikelSlugRoute = ArtikelSlugRouteImport.update({
   path: '/artikel/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PintuSlugRoute = PintuSlugRouteImport.update({
+  id: '/pintu/$slug',
+  path: '/pintu/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
   '/artikel/$slug': typeof ArtikelSlugRoute
+  '/pintu/$slug': typeof PintuSlugRoute
   '/artikel/': typeof ArtikelIndexRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
   '/artikel/$slug': typeof ArtikelSlugRoute
+  '/pintu/$slug': typeof PintuSlugRoute
   '/artikel': typeof ArtikelIndexRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/produk': typeof ProdukRoute
   '/tentang': typeof TentangRoute
   '/artikel/$slug': typeof ArtikelSlugRoute
+  '/pintu/$slug': typeof PintuSlugRoute
   '/artikel/': typeof ArtikelIndexRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/produk'
     | '/tentang'
     | '/artikel/$slug'
+    | '/pintu/$slug'
     | '/artikel/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/produk'
     | '/tentang'
     | '/artikel/$slug'
+    | '/pintu/$slug'
     | '/artikel'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/produk'
     | '/tentang'
     | '/artikel/$slug'
+    | '/pintu/$slug'
     | '/artikel/'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   ProdukRoute: typeof ProdukRoute
   TentangRoute: typeof TentangRoute
   ArtikelSlugRoute: typeof ArtikelSlugRoute
+  PintuSlugRoute: typeof PintuSlugRoute
   ArtikelIndexRoute: typeof ArtikelIndexRoute
 }
 
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArtikelSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pintu/$slug': {
+      id: '/pintu/$slug'
+      path: '/pintu/$slug'
+      fullPath: '/pintu/$slug'
+      preLoaderRoute: typeof PintuSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProdukRoute: ProdukRoute,
   TentangRoute: TentangRoute,
   ArtikelSlugRoute: ArtikelSlugRoute,
+  PintuSlugRoute: PintuSlugRoute,
   ArtikelIndexRoute: ArtikelIndexRoute,
 }
 export const routeTree = rootRouteImport

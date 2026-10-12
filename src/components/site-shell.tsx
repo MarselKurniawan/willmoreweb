@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SocialLinks } from "@/components/social-links";
-import logoUrl from "@/assets/logo-willmore.jpg";
+import logoUrl from "@/assets/logo-willmore.png";
 
 const navigation = [
   { to: "/", label: "Beranda" },

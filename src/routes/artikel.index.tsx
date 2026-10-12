@@ -3,7 +3,7 @@ import { PageShell } from "@/components/site-shell";
 import { PageIntro } from "@/components/page-sections";
 import { articles, wordCount } from "@/lib/articles";
 
-export const Route = createFileRoute("/artikel/")({
+export const Route = createFileRoute("/artikel/")({ staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Artikel & Panduan Pintu | Willmore" },

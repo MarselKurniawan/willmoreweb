@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, ArrowLink } from "@/components/site-shell";
 import { PageIntro } from "@/components/page-sections";
 import { services } from "@/lib/site-content";
-export const Route = createFileRoute("/layanan")({ head: () => ({ meta: [
+export const Route = createFileRoute("/layanan")({ staticData: { sitemap: true }, head: () => ({ meta: [
   { title: "Layanan Willmore | Konsultasi, Instalasi & After Sales" }, { name: "description", content: "Layanan pintu Willmore mencakup konsultasi, pemilihan produk, instalasi, dan after sales." },
   { property: "og:title", content: "Layanan Pintu Willmore" }, { property: "og:description", content: "Pendampingan menyeluruh dari konsultasi hingga after sales." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ]}), component: ServicesPage });

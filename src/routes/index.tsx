@@ -4,7 +4,7 @@ import { PageShell, ArrowLink } from "@/components/site-shell";
 import { FaqSection, MarketplaceBanner, SectionHeading } from "@/components/page-sections";
 import { heroImage, products, services } from "@/lib/site-content";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")({ staticData: { sitemap: true },
   head: () => ({ meta: [
     { title: "Willmore | Pintu Berkualitas Sejak 2002" },
     { name: "description", content: "Temukan pintu baja, kayu, aluminium, PVC dan UPVC Willmore dengan layanan konsultasi, instalasi hingga after sales sejak 2002." },

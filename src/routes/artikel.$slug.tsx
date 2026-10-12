@@ -4,7 +4,7 @@ import { SocialLinks } from "@/components/social-links";
 import { articles, getArticle } from "@/lib/articles";
 import { marketplaces, socials } from "@/lib/site-content";
 
-export const Route = createFileRoute("/artikel/$slug")({
+export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: true },
   loader: ({ params }) => {
     const article = getArticle(params.slug);
     if (!article) throw notFound();

@@ -3,7 +3,7 @@ import { PageShell, ArrowLink } from "@/components/site-shell";
 import { PageIntro, SectionHeading } from "@/components/page-sections";
 import { heroImage } from "@/lib/site-content";
 
-export const Route = createFileRoute("/tentang")({ head: () => ({ meta: [
+export const Route = createFileRoute("/tentang")({ staticData: { sitemap: true }, head: () => ({ meta: [
   { title: "Tentang Willmore | Spesialis Pintu Sejak 2002" }, { name: "description", content: "Kenali Willmore, spesialis pintu yang mendampingi kebutuhan pelanggan dari konsultasi dan instalasi hingga after sales sejak 2002." },
   { property: "og:title", content: "Tentang Willmore | Spesialis Pintu Sejak 2002" }, { property: "og:description", content: "Pengalaman lebih dari dua dekade dalam membantu kebutuhan pintu." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ]}), component: AboutPage });
