@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return <PageShell overlayHeader>
     <section className="hero">
-      <img src={heroImage} alt="Pintu kayu pivot pada rumah modern tropis" width={1920} height={1088} />
+      <img src={heroImage} alt="Pintu ganda motif kayu pada fasad rumah modern dengan pencahayaan malam" width={1672} height={941} fetchPriority="high" />
       <div className="hero-shade" />
       <div className="hero-copy"><p>Pintu berkualitas sejak 2002</p><Link to="/kontak" className="hero-link">Mulai konsultasi <ArrowUpRight size={17} /></Link></div>
       <h1>Willmore<sup>®</sup></h1><ArrowDownRight className="hero-arrow" />

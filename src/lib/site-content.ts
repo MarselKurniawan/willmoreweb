@@ -1,10 +1,10 @@
 import steelDoor from "@/assets/steel-door.jpg";
 import woodDoor from "@/assets/wood-door.jpg";
 import aluminiumDoor from "@/assets/aluminium-door.jpg";
-import heroImage from "@/assets/willmore-hero.jpg";
+import heroAsset from "@/assets/willmore-home-entrance.jpg.asset.json";
 import upvcDoor from "@/assets/upvc-door.jpg";
 
-export { heroImage };
+export const heroImage = heroAsset.url;
 
 export const whatsappNumber = "6281227281454";
 export const completeSetNote = "Setiap pembelian sudah termasuk satu set lengkap kusen dan handle, siap dipasang.";

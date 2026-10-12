@@ -31,6 +31,8 @@
   --surface-dark-soft: oklch(0.24 0.012 48);
   --on-dark: oklch(0.96 0.008 80);
   --overlay: oklch(0.08 0.01 50 / 0.56);
+  --header-glass: oklch(0.17 0.012 48 / 0.18);
+  --header-line: oklch(0.96 0.008 80 / 0.22);
   --marketplace-shopee: oklch(0.66 0.2 42);
   --marketplace-tokopedia: oklch(0.65 0.17 145);
   --radius: 0.25rem;
@@ -44,12 +46,12 @@ button, input, textarea, select { font: inherit; }
 img { display: block; max-width: 100%; }
 ::selection { background: var(--accent); color: var(--accent-foreground); }
 
-.site-header { height: 5.5rem; padding: 0 4vw; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--border); position: relative; z-index: 20; background: color-mix(in oklab, var(--background) 94%, transparent); }
-.site-header-overlay { position: absolute; top: 0; left: 0; right: 0; background: color-mix(in oklab, var(--background) 88%, transparent); border-color: color-mix(in oklab, var(--foreground) 20%, transparent); color: var(--foreground); backdrop-filter: blur(10px); }
+.site-header { height: 5.5rem; padding: 0 4vw; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--header-line); position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: var(--header-glass); backdrop-filter: blur(20px) saturate(130%); }
+.site-header-overlay { color: var(--on-dark); }
 .brand-link { justify-self: start; display: block; }
 .brand-logo { width: 11rem; height: auto; object-fit: contain; }
 .desktop-nav { display: flex; gap: 2rem; font-size: .76rem; }
-.desktop-nav a { opacity: .68; transition: opacity .25s; }
+.desktop-nav a { opacity: .9; transition: opacity .25s; }
 .desktop-nav a:hover, .desktop-nav .nav-active { opacity: 1; }
 .header-cta, .text-link { display: inline-flex; gap: .55rem; align-items: center; width: fit-content; font-size: .78rem; font-weight: 600; padding-bottom: .35rem; border-bottom: 1px solid currentColor; }
 .header-cta { justify-self: end; }
@@ -108,7 +110,7 @@ details p { margin: 0 4rem 1.8rem; max-width: 45rem; line-height: 1.7; color: va
 .footer-main { display: flex; justify-content: space-between; align-items: end; gap: 3rem; padding-bottom: 6rem; }
 .footer-main h2 { font-size: clamp(2.7rem, 6vw, 6rem); line-height: .98; max-width: 65rem; margin: 0; font-weight: 500; }
 .footer-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; gap: 2rem; padding-top: 2rem; border-top: 1px solid color-mix(in oklab, var(--on-dark) 25%, transparent); font-size: .72rem; }
-.footer-bottom img { width: 10rem; background: var(--accent); padding: .65rem .8rem; }
+.footer-bottom img { width: 10rem; }
 .footer-bottom div { display: flex; justify-content: center; gap: 1.5rem; }
 .footer-bottom p { margin: 0; text-align: right; line-height: 1.6; }
 
@@ -183,7 +185,7 @@ h1, h2, h3 { text-transform: uppercase; }
   .brand-logo { width: 9rem; }
   .desktop-nav, .header-cta { display: none; }
   .menu-button { display: grid; place-items: center; background: transparent; color: inherit; border: 0; padding: .5rem; }
-  .mobile-nav { display: flex; position: absolute; top: 4.7rem; left: 0; right: 0; background: var(--surface-dark); color: var(--on-dark); padding: 2rem 1.25rem 3rem; flex-direction: column; gap: 1.5rem; font-size: 1.6rem; border-top: 1px solid color-mix(in oklab, var(--on-dark) 20%, transparent); }
+  .mobile-nav { display: flex; position: absolute; top: 4.7rem; left: 0; right: 0; background: color-mix(in oklab, var(--surface-dark) 88%, transparent); backdrop-filter: blur(20px); color: var(--on-dark); padding: 2rem 1.25rem 3rem; flex-direction: column; gap: 1.5rem; font-size: 1.6rem; border-top: 1px solid var(--header-line); }
   .hero { min-height: 42rem; height: 88vh; }
   .hero h1 { left: 1.1rem; bottom: 1.6rem; font-size: clamp(4.1rem, 20vw, 6.5rem); }
   .hero-copy { left: 1.25rem; bottom: 9rem; }

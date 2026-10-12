@@ -11,3 +11,4 @@
 
 - Keep the Willmore marketing site as separate SEO-friendly TanStack routes sharing one site shell; each page needs unique metadata because every offering must be independently discoverable.
 - Keep business facts in `src/lib/site-content.ts`; this prevents unsupported contact, pricing, and testimonial claims from entering page copy.
+- Keep sitewide analytics scripts and their noscript fallbacks in the root document shell so all content routes share one installation.
