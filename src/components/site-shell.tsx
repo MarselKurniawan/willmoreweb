@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SocialLinks } from "@/components/social-links";
 import logoUrl from "@/assets/logo-willmore.jpg";
 
@@ -15,8 +15,15 @@ const navigation = [
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 40);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
   return (
-    <header className={overlay ? "site-header site-header-overlay" : "site-header"}>
+    <header className={`site-header${overlay ? " site-header-overlay" : ""}${scrolled || !overlay ? " site-header-scrolled" : ""}`}>
       <Link to="/" aria-label="Willmore, kembali ke beranda" className="brand-link">
         <img src={logoUrl} alt="Willmore High Quality Door Specialist" className="brand-logo" width={489} height={133} />
       </Link>
