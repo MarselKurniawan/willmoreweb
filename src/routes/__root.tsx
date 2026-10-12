@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Outlet, Link, createRootRouteWithContext, useRouter, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext, useRouter, HeadContent, Scripts, type ErrorComponentProps } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -8,10 +8,10 @@ function NotFoundComponent() {
   return <div className="state-page"><p className="eyebrow">404</p><h1>Halaman tidak ditemukan.</h1><Link to="/" className="text-link">Kembali ke beranda</Link></div>;
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => { reportLovableError(error, { boundary: "tanstack_root_error_component" }); }, [error]);
+  useEffect(() => { reportLovableError(error instanceof Error ? error : new Error(String(error)), { boundary: "tanstack_root_error_component" }); }, [error]);
   return <div className="state-page"><h1>Halaman belum dapat dimuat.</h1><button className="primary-button" onClick={() => { router.invalidate(); reset(); }}>Coba lagi</button></div>;
 }
 
