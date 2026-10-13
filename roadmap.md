@@ -5,7 +5,7 @@
 - [x] Apply logo, imagery, typography, and responsive interactions
 - [x] Add unique metadata and verify desktop/mobile flows
 - [x] Add expanded FAQ and Shopee/Tokopedia shopping banner
-- [x] Keep the Willmore logo black and capitalize all headlines
+- [x] Apply the requested Willmore logo lettering color and capitalize all headlines
 - [x] Verify the updated desktop and mobile presentation
 - [x] Send contact form enquiries to Willmore WhatsApp
 - [x] Add verified product specifications and complete-set details
@@ -13,6 +13,6 @@
 - [x] Replace homepage photo and shared logo with the supplied images
 - [x] Make the navigation fixed at the top with translucent blur
 - [x] Install Meta Pixel and Google Tag Manager sitewide and verify
-- [ ] Add useful SEO articles covering quality door brands, steel door recommendations, and wood/engineering doors
-- [ ] Use a direct JPG homepage photo and white-lettered transparent logo
-- [ ] Verify article navigation, image rendering, and website health
+- [x] Add useful SEO articles covering quality door brands, steel door recommendations, and wood/engineering doors
+- [x] Use a direct JPG homepage photo and white-lettered transparent logo
+- [x] Verify article navigation, image rendering, and website health
