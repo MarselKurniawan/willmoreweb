@@ -1,10 +1,10 @@
 import steelDoor from "@/assets/steel-door.jpg";
 import woodDoor from "@/assets/wood-door.jpg";
 import aluminiumDoor from "@/assets/aluminium-door.jpg";
-import heroAsset from "@/assets/willmore-home-entrance.jpg.asset.json";
+import homepagePhoto from "@/assets/willmore-home-entrance.jpg";
 import upvcDoor from "@/assets/upvc-door.jpg";
 
-export const heroImage = heroAsset.url;
+export const heroImage = homepagePhoto;
 
 export const whatsappNumber = "6281227281454";
 export const completeSetNote = "Setiap pembelian sudah termasuk satu set lengkap kusen dan handle, siap dipasang.";
@@ -83,7 +83,7 @@ export const categories = [
     specs: [["Material", "Baja"], ["Finishing", "Motif serat kayu natural"], ["Keamanan", "11 titik penguncian"], ["Ketahanan", "Tahan air dan cuaca"], ["Detail", "Architrave dan peredam di sela pintu"], ["Paket", "Daun pintu, kusen, dan handle"]],
     uses: ["Pintu utama rumah", "Pintu samping atau garasi", "Area yang terkena cuaca"],
     faqs: [["Apakah pintu baja Willmore tahan cuaca?", "Ya. Pintu baja Willmore tahan air dan cuaca sehingga cocok untuk pintu utama."], ["Apa fungsi architrave?", "Architrave menutup celah antara kusen dan dinding sehingga hasil pemasangan lebih rapi dan tidak terlihat lubang."], ["Berapa titik penguncian pintu baja Willmore?", "Pintu baja Willmore memiliki 11 titik penguncian."]],
-    articles: ["panduan-memilih-pintu-baja", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-utama-rumah"],
+    articles: ["rekomendasi-pintu-baja-berkualitas", "panduan-memilih-pintu-baja", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-utama-rumah"],
   },
   {
     slug: "kayu", name: "Pintu Kayu", image: woodDoor,
@@ -93,7 +93,7 @@ export const categories = [
     specs: [["Lapisan", "HMR, bukan HPL"], ["Ketebalan", "4,2 cm (standar umum 3,5 cm)"], ["Ketahanan", "Lebih tahan rayap"], ["Detail", "Architrave untuk hasil rapi"], ["Paket", "Daun pintu, kusen, dan handle"]],
     uses: ["Pintu kamar tidur", "Pintu ruang kerja", "Pintu interior bernuansa hangat"],
     faqs: [["Apa beda lapisan HMR dan HPL?", "Willmore memakai lapisan HMR, bukan HPL, sehingga pintu kayu lebih tahan rayap."], ["Berapa ketebalan pintu kayu Willmore?", "4,2 cm, di atas ketebalan standar umum 3,5 cm, sehingga lebih kuat dan kokoh."]],
-    articles: ["panduan-memilih-pintu-kayu", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-rumah-terbaik"],
+    articles: ["pintu-kayu-engineering-door", "panduan-memilih-pintu-kayu", "pintu-baja-vs-pintu-kayu", "rekomendasi-pintu-rumah-terbaik"],
   },
   {
     slug: "aluminium", name: "Pintu Aluminium", image: aluminiumDoor,

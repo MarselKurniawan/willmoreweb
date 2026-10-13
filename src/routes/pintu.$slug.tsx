@@ -32,7 +32,8 @@ export const Route = createFileRoute("/pintu/$slug")({
 
 function CategoryPage() {
   const { slug } = Route.useParams();
-  const c = getCategory(slug)!;
+  const c = getCategory(slug);
+  if (!c) throw notFound();
   const others = categories.filter((o) => o.slug !== slug);
   return <PageShell>
     <section className="section-pad category-page">
