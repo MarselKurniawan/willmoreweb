@@ -13,3 +13,6 @@
 - [x] Replace homepage photo and shared logo with the supplied images
 - [x] Make the navigation fixed at the top with translucent blur
 - [x] Install Meta Pixel and Google Tag Manager sitewide and verify
+- [ ] Add useful SEO articles covering quality door brands, steel door recommendations, and wood/engineering doors
+- [ ] Use a direct JPG homepage photo and white-lettered transparent logo
+- [ ] Verify article navigation, image rendering, and website health
