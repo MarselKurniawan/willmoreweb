@@ -5,6 +5,60 @@ import { getCategory } from "@/lib/site-content";
 
 export const qualityArticles: Article[] = [
   {
+    slug: "merk-pintu-berkualitas-rekomendasi-merk-pintu",
+    category: "Rekomendasi",
+    title: "Merk Pintu Berkualitas: Kriteria dan Rekomendasi Merk Pintu untuk Rumah",
+    metaTitle: "Merk Pintu Berkualitas & Rekomendasi Merk Pintu | Willmore",
+    description: "Mencari merk pintu terbaik? Gunakan panduan material, spesifikasi, paket, garansi, dan layanan untuk menilai rekomendasi merk pintu berkualitas.",
+    keyword: "merk pintu berkualitas, merk pintu terbaik, rekomendasi merk pintu",
+    image: woodDoor,
+    imageAlt: "Contoh pintu kayu sebagai bagian dari pilihan material pintu rumah",
+    intro: [
+      "Merk pintu berkualitas adalah merek yang membantu pembeli memahami produk secara jelas: materialnya apa, cocok dipasang di mana, apa isi paketnya, dan bagaimana dukungan setelah pembelian. Tampilan menarik tetap penting, tetapi pintu digunakan setiap hari sehingga kenyamanan, ketepatan pemasangan, dan kesesuaian fungsi tidak boleh terlewat.",
+      "Jika Anda sedang mencari merk pintu terbaik atau rekomendasi merk pintu, mulailah dengan kriteria yang bisa diperiksa. Artikel ini tidak membuat peringkat antarmerek tanpa dasar pengujian. Willmore dibahas sebagai salah satu pilihan berdasarkan informasi produknya, sehingga Anda dapat menilai kesesuaiannya dengan kebutuhan rumah dan membandingkan penawaran secara setara.",
+    ],
+    sections: [
+      { id: "kualitas-sesuai-ruang", heading: "Pintu Terbaik Harus Sesuai dengan Ruang", paragraphs: [
+        "Tidak ada satu material yang menjadi jawaban terbaik untuk semua ruangan. Pintu utama memiliki kebutuhan akses dan keamanan; pintu kamar berhubungan dengan privasi serta karakter interior; kamar mandi menghadapi kelembapan dan air. Karena itu, daftar merek saja belum menjawab kebutuhan Anda jika tidak disertai penjelasan lokasi penggunaan.",
+        "Buat daftar pintu yang dibutuhkan sebelum melihat katalog. Catat fungsi setiap ruang, kondisi lingkungan, perkiraan bukaan, dan prioritas desain. Dengan daftar sederhana ini, konsultasi menjadi lebih terarah. Anda juga dapat menghindari pembelian material yang tampak cocok secara visual tetapi penggunaannya tidak sesuai dengan area pemasangan.",
+      ] },
+      { id: "spesifikasi-jelas", heading: "Ciri Pertama: Spesifikasi yang Jelas dan Dapat Ditanyakan", paragraphs: [
+        "Merek yang layak dipertimbangkan sebaiknya menjelaskan material dan detail produk tanpa hanya mengandalkan kata premium. Untuk pintu baja, tanyakan sistem penguncian, finishing, serta kelengkapan kusen. Untuk pintu kayu, tanyakan lapisan, ketebalan, dan konstruksi model. Pada aluminium, PVC, atau UPVC, periksa lokasi penggunaan yang disarankan dan cakupan garansi apabila tersedia.",
+        "Foto membantu memahami desain, tetapi tidak membuktikan semua karakter bahan. Hindari menyimpulkan ketahanan air, ketahanan api, atau kemampuan kedap suara dari gambar. Jika kebutuhan proyek mensyaratkan kemampuan khusus, minta dokumentasi yang relevan. Informasi yang belum tercantum harus dikonfirmasi, bukan diisi dengan asumsi dari nama produk.",
+      ] },
+      { id: "lima-material", heading: "Lima Material Willmore untuk Kebutuhan Berbeda", paragraphs: [
+        "Willmore merupakan spesialis pintu sejak 2002 dengan pilihan baja, kayu, aluminium, PVC, dan UPVC. Kelima kategori ini dapat menjadi titik awal memilih pintu berdasarkan ruang. Detailnya berbeda, sehingga jangan memindahkan klaim dari satu kategori ke kategori lain; garansi bahan UPVC, misalnya, bukan otomatis garansi semua pintu.",
+        "Gunakan ringkasan berikut untuk menyaring pilihan, lalu baca halaman kategori sebelum membuat keputusan. Model, warna, dan ukuran yang tersedia tetap perlu dikonfirmasi. Memilih merek dengan beberapa material juga memudahkan diskusi kebutuhan rumah yang memerlukan kombinasi pintu utama, pintu interior, dan akses area basah.",
+      ], list: [
+        `Pintu Baja — ${getCategory("baja")?.intro ?? "Baca spesifikasi kategori baja."}`,
+        `Pintu Kayu — ${getCategory("kayu")?.intro ?? "Baca spesifikasi kategori kayu."}`,
+        `Pintu Aluminium — ${getCategory("aluminium")?.intro ?? "Baca spesifikasi kategori aluminium."}`,
+        `Pintu PVC — ${getCategory("pvc")?.intro ?? "Baca spesifikasi kategori PVC."}`,
+        `Pintu UPVC — ${getCategory("upvc")?.intro ?? "Baca spesifikasi kategori UPVC."}`,
+      ] },
+      { id: "kelengkapan-paket", heading: "Ciri Kedua: Kelengkapan Paket yang Transparan", paragraphs: [
+        "Bandingkan isi penawaran, bukan harga yang terlihat paling rendah. Penawaran daun pintu saja berbeda dengan paket yang sudah mencakup kusen dan handle. Periksa ukuran komponen, aksesori yang disertakan, serta kebutuhan pekerjaan di lokasi. Detail kecil yang terlewat dapat membuat proses pemasangan harus berhenti untuk mencari komponen tambahan.",
+        "Semua pembelian pintu Willmore sudah termasuk satu set lengkap kusen dan handle, siap dipasang. Namun, kelengkapan produk tidak berarti biaya pemasangan, pengiriman, atau perapian bukaan otomatis termasuk. Tanyakan rinciannya pada penawaran resmi. Cara ini membantu Anda memahami biaya keseluruhan tanpa bergantung pada angka harga yang tidak setara.",
+      ] },
+      { id: "garansi", heading: "Ciri Ketiga: Garansi dengan Cakupan yang Dipahami", paragraphs: [
+        "Garansi perlu dibaca berdasarkan hal yang dijamin. Garansi warna berbeda dari garansi bahan; keduanya juga tidak otomatis mencakup semua aksesori atau pekerjaan pemasangan. Minta ketentuan tertulis, cara mengajukan klaim, dan syarat pemakaian. Durasi panjang akan lebih berguna jika pembeli memahami apa yang benar-benar tercakup.",
+        "Pada Willmore, pintu aluminium memiliki garansi 10 tahun tidak berubah warna dan UPVC memiliki garansi bahan 10 tahun. Jangan menganggap durasi tersebut berlaku pada baja, kayu, atau PVC tanpa konfirmasi. Jika Anda membandingkan merek, catat objek garansi dan ketentuannya pada kolom terpisah agar perbandingannya adil.",
+      ] },
+      { id: "layanan", heading: "Ciri Keempat: Konsultasi, Instalasi, dan After Sales", paragraphs: [
+        "Pintu yang dipilih dengan baik masih membutuhkan pemasangan yang benar. Konsultasi berguna untuk memeriksa fungsi ruang, ukuran bukaan, arah akses, dan pilihan material. Dukungan instalasi membantu membahas kesiapan lokasi, sementara after sales menjadi jalur bertanya apabila ada kebutuhan setelah produk terpasang.",
+        "Willmore menyediakan rangkaian layanan konsultasi, pemilihan produk, instalasi, hingga after sales. Saat berdiskusi, jelaskan kebutuhan pekerjaan secara lengkap. Jangan mengasumsikan semua proyek memiliki cakupan atau biaya yang sama. Informasi yang disepakati sebelum membeli membantu mengurangi perbedaan harapan antara pembeli dan penyedia layanan.",
+      ] },
+      { id: "kanal-resmi", heading: "Memeriksa Katalog dan Kanal Pembelian", paragraphs: [
+        "Saat menemukan rekomendasi merk pintu di media sosial atau marketplace, cocokkan nama kategori dan spesifikasi dengan informasi website. Motif yang mirip belum tentu berarti model dan materialnya sama. Periksa isi paket pada listing, lalu tanyakan apabila ada perbedaan keterangan yang memengaruhi keputusan membeli.",
+        "Website Willmore menyediakan tautan ke Shopee, Tokopedia, dan akun media sosial. Gunakan kanal tersebut untuk melihat informasi yang tersedia dan melanjutkan konsultasi. Simpan rincian produk serta penawaran yang Anda sepakati, terutama jika membeli beberapa unit atau membutuhkan pekerjaan pemasangan dengan kondisi lokasi khusus.",
+      ] },
+      { id: "checklist-dan-faq", heading: "Checklist dan Pertanyaan Sebelum Menentukan Merk", paragraphs: [
+        "Apakah merek paling mahal pasti terbaik? Tidak selalu. Kesesuaian produk dengan ruang dan kejelasan penawaran lebih penting daripada harga sebagai satu-satunya indikator. Sebaliknya, harga murah juga perlu dinilai bersama kelengkapan paket dan kebutuhan pekerjaan, bukan dianggap otomatis paling hemat.",
+        "Apakah Willmore bisa dipertimbangkan sebagai merk pintu berkualitas? Anda dapat menilainya dari lima kategori material, detail spesifikasi, paket kusen dan handle, serta layanan yang dijelaskan. Keputusan akhir tetap perlu melihat model aktual dan kebutuhan rumah. Untuk panduan lebih khusus, lanjutkan ke artikel rekomendasi pintu baja atau pintu kayu dan engineering door.",
+      ], list: ["Tentukan fungsi dan kondisi setiap lokasi pintu.", "Baca spesifikasi, bukan hanya label kualitas.", "Konfirmasi ukuran, model, arah bukaan, dan isi paket.", "Pisahkan harga produk dari biaya pekerjaan tambahan.", "Minta cakupan garansi dan informasi layanan yang jelas."] },
+    ],
+  },
+  {
     slug: "rekomendasi-pintu-baja-berkualitas",
     category: "Pintu Baja",
     title: "Rekomendasi Pintu Baja Berkualitas: Panduan Memilih untuk Rumah",
