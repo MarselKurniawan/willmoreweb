@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-shell";
 import { SocialLinks } from "@/components/social-links";
 import { articles, getArticle } from "@/lib/articles";
-import { marketplaces, socials } from "@/lib/site-content";
+import { categories, marketplaces, socials } from "@/lib/site-content";
 
 export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: true },
   loader: ({ params }) => {
@@ -19,12 +19,12 @@ export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: 
         { title: a.metaTitle },
         { name: "description", content: a.description },
         { name: "keywords", content: `${a.keyword}, Willmore, pintu berkualitas` },
-        { property: "og:title", content: a.title },
+        { property: "og:title", content: a.metaTitle },
         { property: "og:description", content: a.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: a.title },
+        { name: "twitter:title", content: a.metaTitle },
         { name: "twitter:description", content: a.description },
       ],
       links: [{ rel: "canonical", href: url }],
@@ -63,7 +63,13 @@ export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: 
 
 function ArticlePage() {
   const { slug } = Route.useLoaderData();
-  const a = getArticle(slug)!;
+  const a = getArticle(slug);
+  if (!a) throw notFound();
+  const relevantCategories = categories.filter((category) =>
+    a.keyword.toLowerCase().includes(category.name.toLowerCase()) ||
+    a.category.toLowerCase().includes(category.name.toLowerCase()) ||
+    a.category === "Rekomendasi" || a.category === "Brand Willmore"
+  );
   const related = articles.filter((x) => x.slug !== a.slug);
   return (
     <PageShell>
@@ -94,6 +100,10 @@ function ArticlePage() {
             Lihat pilihan lengkap di <Link to="/produk">halaman produk Willmore</Link>, pelajari <Link to="/layanan">layanan konsultasi hingga after sales</Link>, atau <Link to="/kontak">hubungi tim kami</Link>. Belanja online juga tersedia di{" "}
             {marketplaces.map((m, i) => <span key={m.name}>{i > 0 && " dan "}<a href={m.url} target="_blank" rel="noopener">{m.name}</a></span>)}.
           </p>
+          {relevantCategories.length > 0 && <section>
+            <h2>Spesifikasi material terkait</h2>
+            <ul>{relevantCategories.map((category) => <li key={category.slug}><Link to="/pintu/$slug" params={{ slug: category.slug }}>Spesifikasi, penggunaan, dan FAQ {category.name} Willmore</Link></li>)}</ul>
+          </section>}
           <div className="article-follow">
             <h2>Ikuti Willmore</h2>
             <p>Dapatkan inspirasi pintu, info produk, dan tips perawatan di media sosial resmi kami.</p>
