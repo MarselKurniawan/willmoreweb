@@ -4,7 +4,7 @@ import aluminiumDoor from "@/assets/aluminium-door.jpg";
 import upvcDoor from "@/assets/upvc-door.jpg";
 import heroImage from "@/assets/willmore-hero.jpg";
 
-export type ArticleSection = { id: string; heading: string; paragraphs: string[]; list?: string[]; categorySlugs?: string[] };
+export type ArticleSection = { id: string; heading: string; paragraphs: string[]; list?: string[] | undefined; categorySlugs?: string[] | undefined };
 export type Article = {
   slug: string;
   category: string;
@@ -17,8 +17,8 @@ export type Article = {
   intro: string[];
   sections: ArticleSection[];
   /** Explicit ISO posting timestamp; undefined for legacy articles whose date was never recorded. */
-  publishedAt?: string;
-  relatedSlugs?: string[];
+  publishedAt?: string | undefined;
+  relatedSlugs?: string[] | undefined;
 };
 
 export const articles: Article[] = [
