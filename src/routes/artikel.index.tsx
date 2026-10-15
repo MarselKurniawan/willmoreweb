@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-shell";
 import { PageIntro } from "@/components/page-sections";
 import { articles, wordCount } from "@/lib/articles";
+import { ArticlePublished } from "@/components/article-published";
 
 export const Route = createFileRoute("/artikel/")({ staticData: { sitemap: true },
   head: () => ({
@@ -27,6 +28,7 @@ function ArticlesPage() {
         {articles.map((a) => (
           <Link key={a.slug} to="/artikel/$slug" params={{ slug: a.slug }} className="article-card">
             <div className="img-wrap"><img src={a.image} alt={a.imageAlt} loading="lazy" width={1200} height={900} /></div>
+            <div className="article-meta"><ArticlePublished publishedAt={a.publishedAt} /></div>
             <span>{a.category} · {Math.ceil(wordCount(a) / 200)} menit baca</span>
             <h2>{a.title}</h2>
             <p>{a.description}</p>

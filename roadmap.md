@@ -16,6 +16,7 @@
 - [x] Add useful SEO articles covering quality door brands, steel door recommendations, and wood/engineering doors
 - [x] Use a direct JPG homepage photo and white-lettered transparent logo
 - [x] Verify article navigation, image rendering, and website health
-- [ ] Research supporting keywords and write six distinct SEO articles
-- [ ] Show newest articles first with recorded posting dates and Jakarta times
-- [ ] Verify article reading, metadata, photos, and contextual links
+- [x] Research supporting keywords and write six distinct SEO articles
+- [x] Show newest articles first with recorded posting dates and Jakarta times
+- [x] Verify article reading, metadata, photos, and contextual links
+- [x] Add a Kelebihan Willmore article targeting best/quality door brand keywords

@@ -3,6 +3,7 @@ import { PageShell } from "@/components/site-shell";
 import { SocialLinks } from "@/components/social-links";
 import { articles, getArticle } from "@/lib/articles";
 import { categories, marketplaces, socials } from "@/lib/site-content";
+import { ArticlePublished } from "@/components/article-published";
 
 export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: true },
   loader: ({ params }) => {
@@ -37,6 +38,7 @@ export const Route = createFileRoute("/artikel/$slug")({ staticData: { sitemap: 
             headline: a.title,
             description: a.description,
             inLanguage: "id",
+            ...(a.publishedAt ? { datePublished: a.publishedAt } : {}),
             author: { "@type": "Organization", name: "Willmore" },
             publisher: { "@type": "Organization", name: "Willmore", sameAs: socials.map((s) => s.url) },
             mainEntityOfPage: url,
@@ -70,13 +72,15 @@ function ArticlePage() {
     a.category.toLowerCase().includes(category.name.toLowerCase()) ||
     a.category === "Rekomendasi" || a.category === "Brand Willmore"
   );
-  const related = articles.filter((x) => x.slug !== a.slug);
+  const preferred = (a.relatedSlugs ?? []).map((s) => getArticle(s)).filter((x): x is NonNullable<typeof x> => !!x && x.slug !== a.slug);
+  const related = [...preferred, ...articles.filter((x) => x.slug !== a.slug && !preferred.includes(x))];
   return (
     <PageShell>
       <header className="article-hero">
         <nav aria-label="Breadcrumb"><Link to="/">Beranda</Link>/<Link to="/artikel">Artikel</Link>/<span>{a.category}</span></nav>
         <h1>{a.title}</h1>
         <p>{a.description}</p>
+        <div className="article-meta"><ArticlePublished publishedAt={a.publishedAt} /></div>
       </header>
       <figure className="article-cover">
         <img src={a.image} alt={a.imageAlt} width={1536} height={1024} />
@@ -94,6 +98,16 @@ function ArticlePage() {
               <h2 id={s.id}>{s.heading}</h2>
               {s.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
               {s.list && <ul>{s.list.map((l) => <li key={l}>{l}</li>)}</ul>}
+              {s.categorySlugs && s.categorySlugs.length > 0 && (
+                <p className="article-section-links">
+                  Lihat spesifikasi:{" "}
+                  {s.categorySlugs.map((slug, i) => {
+                    const c = categories.find((x) => x.slug === slug);
+                    if (!c) return null;
+                    return <span key={slug}>{i > 0 && ", "}<Link to="/pintu/$slug" params={{ slug }}>{c.name} Willmore</Link></span>;
+                  })}
+                </p>
+              )}
             </section>
           ))}
           <p>
