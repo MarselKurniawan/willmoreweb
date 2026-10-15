@@ -4,7 +4,7 @@ import aluminiumDoor from "@/assets/aluminium-door.jpg";
 import upvcDoor from "@/assets/upvc-door.jpg";
 import heroImage from "@/assets/willmore-hero.jpg";
 
-export type ArticleSection = { id: string; heading: string; paragraphs: string[]; list?: string[] };
+export type ArticleSection = { id: string; heading: string; paragraphs: string[]; list?: string[]; categorySlugs?: string[] };
 export type Article = {
   slug: string;
   category: string;
@@ -16,6 +16,9 @@ export type Article = {
   imageAlt: string;
   intro: string[];
   sections: ArticleSection[];
+  /** Explicit ISO posting timestamp; undefined for legacy articles whose date was never recorded. */
+  publishedAt?: string;
+  relatedSlugs?: string[];
 };
 
 export const articles: Article[] = [
@@ -470,4 +473,14 @@ export const wordCount = (a: Article) =>
   [...a.intro, ...a.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])].join(" ").split(/\s+/).length;
 import { recommendationArticles } from "@/lib/articles-rekomendasi";
 import { qualityArticles } from "@/lib/articles-quality";
-articles.push(...recommendationArticles, ...qualityArticles);
+import { professionalArticles } from "@/lib/articles-professional";
+import { willmoreArticles } from "@/lib/articles-willmore";
+articles.push(...recommendationArticles, ...qualityArticles, ...professionalArticles, ...willmoreArticles);
+// Newest dated articles first; undated legacy articles keep their original order after them.
+const originalOrder = new Map(articles.map((a, i) => [a.slug, i]));
+articles.sort((a, b) => {
+  if (a.publishedAt && b.publishedAt) return b.publishedAt.localeCompare(a.publishedAt);
+  if (a.publishedAt) return -1;
+  if (b.publishedAt) return 1;
+  return (originalOrder.get(a.slug) ?? 0) - (originalOrder.get(b.slug) ?? 0);
+});
