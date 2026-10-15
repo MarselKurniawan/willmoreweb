@@ -475,7 +475,8 @@ import { recommendationArticles } from "@/lib/articles-rekomendasi";
 import { qualityArticles } from "@/lib/articles-quality";
 import { professionalArticles } from "@/lib/articles-professional";
 import { willmoreArticles } from "@/lib/articles-willmore";
-articles.push(...recommendationArticles, ...qualityArticles, ...professionalArticles, ...willmoreArticles);
+import { trafficArticles } from "@/lib/articles-traffic";
+articles.push(...recommendationArticles, ...qualityArticles, ...professionalArticles, ...willmoreArticles, ...trafficArticles);
 // Newest dated articles first; undated legacy articles keep their original order after them.
 const originalOrder = new Map(articles.map((a, i) => [a.slug, i]));
 articles.sort((a, b) => {
