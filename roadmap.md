@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Reorder homepage rooms and use the four supplied door PNGs
+- [ ] Smooth the doorway entry animation and verify forward/back navigation
 - [x] Add the five supplied homepage rooms in order with a door-opening slide transition
 - [x] Verify homepage navigation, animation, and mobile layout
 
