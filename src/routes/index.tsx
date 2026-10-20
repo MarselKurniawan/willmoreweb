@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { HomeDoorBanner } from "@/components/home-door-banner";
 import { PageShell, ArrowLink } from "@/components/site-shell";
 import { FaqSection, MarketplaceBanner, SectionHeading } from "@/components/page-sections";
-import { heroImage, products, services } from "@/lib/site-content";
+import { products, services } from "@/lib/site-content";
 
 export const Route = createFileRoute("/")({ staticData: { sitemap: true },
   head: () => ({ meta: [
@@ -17,12 +18,7 @@ export const Route = createFileRoute("/")({ staticData: { sitemap: true },
 
 function HomePage() {
   return <PageShell overlayHeader>
-    <section className="hero">
-      <img src={heroImage} alt="Pintu ganda motif kayu pada fasad rumah modern dengan pencahayaan malam" width={1672} height={941} fetchPriority="high" />
-      <div className="hero-shade" />
-      <div className="hero-copy"><p>Pintu berkualitas sejak 2002</p><Link to="/kontak" className="hero-link">Mulai konsultasi <ArrowUpRight size={17} /></Link></div>
-      <h1>Willmore<sup>®</sup></h1><ArrowDownRight className="hero-arrow" />
-    </section>
+    <HomeDoorBanner />
 
     <section className="statement section-pad">
       <p className="eyebrow">Tentang Willmore</p>

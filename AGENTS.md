@@ -15,3 +15,4 @@
 - Keep SEO article groups in typed content modules consumed by the existing article routes; reuse category specifications from site-content to avoid divergent product facts.
 - Store article posting times as explicit ISO timestamps and sort dated articles newest-first; undated legacy articles remain labeled unknown to avoid fabricating publishing history.
 - Import the user-selected homepage JPG and transparent logo PNG directly; preserve alpha and symbol pixels when recoloring logo lettering.
+- Keep the interactive homepage room banner in a dedicated component with normalized photo/door coordinates and motion-reduction support so door transitions remain aligned at every viewport size.
