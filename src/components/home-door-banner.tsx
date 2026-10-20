@@ -63,7 +63,7 @@ export function HomeDoorBanner() {
 
   const complete = () => { busy.current = false; setOutgoing(null); };
 
-  return <section className={`hero door-banner${outgoing !== null ? " is-entering" : ""}`} aria-roledescription="carousel" aria-label="Les espaces Willmore" onTouchStart={(event) => {
+  return <section className={`hero door-banner${outgoing !== null ? " is-entering" : ""}`} aria-roledescription="carousel" aria-label="Ruangan Willmore" onTouchStart={(event) => {
     const touch = event.touches[0];
     if (touch) touchStart.current = { x: touch.clientX, y: touch.clientY };
   }} onTouchEnd={(event) => {

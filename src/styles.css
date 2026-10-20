@@ -96,7 +96,7 @@ img { display: block; max-width: 100%; }
 .door-scene-opening.room-4 .room-photo { clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 0,42.53% 18.36%,42.53% 79.82%,57.46% 79.82%,57.46% 18.36%,42.53% 18.36%,0 0); }
 .door-scene-opening.room-5 .room-photo { clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 0,53.37% 11.72%,53.37% 87.37%,68.16% 87.37%,68.16% 11.72%,53.37% 11.72%,0 0); }
 .door-banner-copy { position: absolute; z-index: 4; left: 4vw; top: 8rem; display: grid; gap: 1rem; }
-.door-banner h1 { z-index: 4; font-size: 8.5rem; bottom: 2.4rem; }
+.hero.door-banner h1 { z-index: 4; font-size: 8.5rem; bottom: 2.4rem; }
 .door-navigation { position: absolute; z-index: 5; right: 4vw; bottom: 2.4rem; display: flex; align-items: center; gap: 2rem; }
 .room-caption { text-align: right; min-width: 8rem; }
 .room-caption span { font-size: .7rem; }
@@ -111,7 +111,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 800px) {
   .door-banner { min-height: 0; height: 88svh; max-height: 880px; }
   .door-banner-copy { top: 6.5rem; left: 1.25rem; }
-  .door-banner h1 { font-size: 3.8rem; left: 1.25rem; bottom: 7.5rem; }
+  .hero.door-banner h1 { font-size: 3.5rem; left: 1.25rem; bottom: 7.5rem; }
   .door-navigation { left: 1.25rem; right: 1.25rem; bottom: 2rem; justify-content: space-between; }
   .room-caption { text-align: left; }
 }
