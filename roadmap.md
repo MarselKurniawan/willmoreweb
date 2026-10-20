@@ -1,5 +1,8 @@
 # Roadmap
 
+- [ ] Add the five supplied homepage rooms in order with a door-opening slide transition
+- [ ] Verify homepage navigation, animation, and mobile layout
+
 - [x] Build shared Willmore navigation and footer
 - [x] Build home, about, products, services, and contact pages
 - [x] Apply logo, imagery, typography, and responsive interactions
