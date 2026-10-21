@@ -64,7 +64,7 @@ export function HomeDoorBanner() {
       { transform: "translate(0, 0) scale(1)", opacity: 1, offset: 0.22 },
       { transform: `translate(${x}px, ${y}px) scale(${scale})`, opacity: 1, offset: 0.86 },
       { transform: `translate(${x}px, ${y}px) scale(${scale})`, opacity: 0, offset: 1 },
-    ], { duration: 2400, easing: "cubic-bezier(.42,0,.2,1)", fill: "forwards" });
+    ], { duration: 2800, easing: "cubic-bezier(.42,0,.2,1)", fill: "forwards" });
     animation.onfinish = () => { busy.current = false; setOutgoing(null); };
     return () => animation.cancel();
   }, [outgoing]);
