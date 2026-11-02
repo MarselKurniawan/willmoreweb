@@ -8,20 +8,20 @@ import landing from "@/assets/home-room-3.jpg";
 import living from "@/assets/home-room-4.jpg";
 import garden from "@/assets/home-room-5.jpg";
 import glassLeaf from "@/assets/home-leaf-glass.jpg";
-import emily from "@/assets/EMILY_DOUBLE_DOOR.png.asset.json";
-import emilyLeaf from "@/assets/EMILY_DOUBLE_DOOR-leaf-fixed.png.asset.json";
-import venetta from "@/assets/VENETTA.png.asset.json";
-import venettaLeaf from "@/assets/VENETTA-leaf.png.asset.json";
-import vassa from "@/assets/VASSA.png.asset.json";
-import vassaLeaf from "@/assets/VASSA-leaf.png.asset.json";
-import up207 from "@/assets/UP_207.png.asset.json";
-import up207Leaf from "@/assets/UP_207-leaf.png.asset.json";
+import emily from "@/assets/EMILY_DOUBLE_DOOR.webp";
+import emilyLeaf from "@/assets/EMILY_DOUBLE_DOOR-leaf-fixed.webp";
+import venetta from "@/assets/VENETTA.webp";
+import venettaLeaf from "@/assets/VENETTA-leaf.webp";
+import vassa from "@/assets/VASSA.webp";
+import vassaLeaf from "@/assets/VASSA-leaf.webp";
+import up207 from "@/assets/UP_207.webp";
+import up207Leaf from "@/assets/UP_207-leaf.webp";
 
 const rooms = [
-  { image: entrance, name: "Pintu Utama", alt: "Fasad rumah modern dengan taman dan pintu utama", scene: 1, frame: emily.url, leaf: emilyLeaf.url, double: true },
-  { image: living, name: "Ruang Keluarga", alt: "Ruang keluarga dengan sofa dan tanaman interior", scene: 4, frame: venetta.url, leaf: venettaLeaf.url, double: false },
-  { image: landing, name: "Ruang Atas", alt: "Ruang atas dengan pagar kaca dan detail kayu", scene: 3, frame: vassa.url, leaf: vassaLeaf.url, double: false },
-  { image: bathroom, name: "Kamar Mandi", alt: "Kamar mandi dengan shower kaca dan pencahayaan hangat", scene: 2, frame: up207.url, leaf: up207Leaf.url, double: false },
+  { image: entrance, name: "Pintu Utama", alt: "Fasad rumah modern dengan taman dan pintu utama", scene: 1, frame: emily, leaf: emilyLeaf, double: true },
+  { image: living, name: "Ruang Keluarga", alt: "Ruang keluarga dengan sofa dan tanaman interior", scene: 4, frame: venetta, leaf: venettaLeaf, double: false },
+  { image: landing, name: "Ruang Atas", alt: "Ruang atas dengan pagar kaca dan detail kayu", scene: 3, frame: vassa, leaf: vassaLeaf, double: false },
+  { image: bathroom, name: "Kamar Mandi", alt: "Kamar mandi dengan shower kaca dan pencahayaan hangat", scene: 2, frame: up207, leaf: up207Leaf, double: false },
   { image: garden, name: "Teras & Taman", alt: "Pintu kaca hitam di teras dengan taman hijau", scene: 5, frame: glassLeaf, leaf: glassLeaf, double: false },
 ] as const;
 
@@ -59,14 +59,18 @@ export function HomeDoorBanner() {
     const scale = Math.max(bounds.width / door.width, bounds.height / door.height) * 1.08;
     const x = (bounds.left + bounds.width / 2 - door.left - door.width / 2) * scale;
     const y = (bounds.top + bounds.height / 2 - door.top - door.height / 2) * scale;
-    const animation = element.animate([
-      { transform: "translate(0, 0) scale(1)", opacity: 1, offset: 0 },
-      { transform: "translate(0, 0) scale(1)", opacity: 1, offset: 0.22 },
-      { transform: `translate(${x}px, ${y}px) scale(${scale})`, opacity: 1, offset: 0.86 },
-      { transform: `translate(${x}px, ${y}px) scale(${scale})`, opacity: 0, offset: 1 },
-    ], { duration: 2800, easing: "cubic-bezier(.42,0,.2,1)", fill: "forwards" });
-    animation.onfinish = () => { busy.current = false; setOutgoing(null); };
-    return () => animation.cancel();
+    const easing = "cubic-bezier(.45,.05,.18,1)";
+    const zoom = element.animate([
+      { transform: "translate(0, 0) scale(1)" },
+      { transform: `translate(${x}px, ${y}px) scale(${scale})` },
+    ], { duration: 2800, easing, fill: "forwards" });
+    const fade = element.animate([
+      { opacity: 1, offset: 0 },
+      { opacity: 1, offset: 0.55 },
+      { opacity: 0, offset: 1 },
+    ], { duration: 2800, easing: "ease-in", fill: "forwards" });
+    zoom.onfinish = () => { busy.current = false; setOutgoing(null); };
+    return () => { zoom.cancel(); fade.cancel(); };
   }, [outgoing]);
 
   useEffect(() => {
