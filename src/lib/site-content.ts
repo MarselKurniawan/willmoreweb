@@ -1,8 +1,8 @@
-import steelDoor from "@/assets/steel-door.jpg";
-import woodDoor from "@/assets/wood-door.jpg";
-import aluminiumDoor from "@/assets/aluminium-door.jpg";
+import steelDoor from "@/assets/EMILY_DOUBLE_DOOR.webp";
+import woodDoor from "@/assets/VENETTA.webp";
+import aluminiumDoor from "@/assets/UP_207.webp";
 import homepagePhoto from "@/assets/willmore-home-entrance.jpg";
-import upvcDoor from "@/assets/upvc-door.jpg";
+import upvcDoor from "@/assets/VASSA.webp";
 
 export const heroImage = homepagePhoto;
 
