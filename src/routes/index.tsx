@@ -28,7 +28,7 @@ function HomePage() {
     <section className="section-pad products-band">
       <SectionHeading number="01" label="Pilihan Material" title="Pintu untuk setiap kebutuhan ruang." />
       <div className="product-grid">
-        {products.slice(0,3).map((product) => <article className="product-card" key={product.slug}>
+        {products.map((product) => <article className="product-card" key={product.slug}>
           <div className="product-image"><img src={product.image} alt={product.name} loading="lazy" width={1200} height={1504} /></div>
           <div className="product-meta"><span>{product.no}</span><h3>{product.name}</h3><ArrowUpRight size={20} /></div>
         </article>)}
