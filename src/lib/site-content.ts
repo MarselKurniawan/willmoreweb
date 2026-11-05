@@ -1,8 +1,8 @@
-import steelDoor from "@/assets/EMILY_DOUBLE_DOOR.webp";
-import woodDoor from "@/assets/VENETTA.webp";
-import aluminiumDoor from "@/assets/UP_207.webp";
+import steelDoor from "@/assets/produk-pintu-baja.webp";
+import woodDoor from "@/assets/produk-pintu-kayu.webp";
+import aluminiumDoor from "@/assets/produk-pintu-aluminium.webp";
 import homepagePhoto from "@/assets/willmore-home-entrance.jpg";
-import upvcDoor from "@/assets/VASSA.webp";
+import upvcDoor from "@/assets/produk-pintu-upvc.webp";
 
 export const heroImage = homepagePhoto;
 
@@ -20,11 +20,11 @@ export const products = [
   },
   {
     no: "02",
-    name: "Pintu Kayu",
-    slug: "kayu",
-    image: woodDoor,
-    summary: "Pintu kayu premium berlapis HMR dengan ketebalan 4,2 cm untuk karakter yang lebih kuat, kokoh, dan tahan rayap.",
-    points: ["Lapisan HMR, bukan HPL", "Ketebalan premium 4,2 cm", "Architrave untuk hasil akhir yang rapi", "Lebih tahan terhadap rayap", "Satu set lengkap kusen dan handle"],
+    name: "Pintu PVC & UPVC",
+    slug: "pvc-upvc",
+    image: upvcDoor,
+    summary: "Pilihan PVC kelas atas dan UPVC bergaransi untuk area interior hingga semi-outdoor dengan kualitas yang sepadan dengan harganya.",
+    points: ["UPVC bergaransi bahan 10 tahun", "UPVC tidak getas, lentur, dan tahan keropos", "UPVC dilengkapi handle serta dapat dikunci", "PVC grade atas dengan harga yang tetap sepadan", "Satu set lengkap kusen dan handle"],
   },
   {
     no: "03",
@@ -37,11 +37,11 @@ export const products = [
   },
   {
     no: "04",
-    name: "Pintu PVC & UPVC",
-    slug: "pvc-upvc",
-    image: upvcDoor,
-    summary: "Pilihan PVC kelas atas dan UPVC bergaransi untuk area interior hingga semi-outdoor dengan kualitas yang sepadan dengan harganya.",
-    points: ["UPVC bergaransi bahan 10 tahun", "UPVC tidak getas, lentur, dan tahan keropos", "UPVC dilengkapi handle serta dapat dikunci", "PVC grade atas dengan harga yang tetap sepadan", "Satu set lengkap kusen dan handle"],
+    name: "Pintu Kayu",
+    slug: "kayu",
+    image: woodDoor,
+    summary: "Pintu kayu premium berlapis HMR dengan ketebalan 4,2 cm untuk karakter yang lebih kuat, kokoh, dan tahan rayap.",
+    points: ["Lapisan HMR, bukan HPL", "Ketebalan premium 4,2 cm", "Architrave untuk hasil akhir yang rapi", "Lebih tahan terhadap rayap", "Satu set lengkap kusen dan handle"],
   },
 ] as const;
 
