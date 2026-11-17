@@ -26,6 +26,7 @@
 - [x] Verify article reading, metadata, photos, and contextual links
 - [x] Add a Kelebihan Willmore article targeting best/quality door brand keywords
 - [x] Add four keunggulan articles (pintu baja terbaik, merk pintu baja, pintu kayu/engineering door, pintu aluminium terbaik) with social media sections
+- [x] Add six feature/brand-awareness articles from latest product facts
 - [ ] Create sitemap.xml and robots.txt (allow GPTBot/OAI-SearchBot)
 - [ ] Add Organization JSON-LD
 - [ ] Publish and validate fix in Google Search Console
