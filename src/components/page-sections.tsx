@@ -1,8 +1,9 @@
 import { ArrowDownRight, ArrowUpRight, ShoppingBag } from "lucide-react";
 import { faqs, marketplaces } from "@/lib/site-content";
+import { heroImage } from "@/lib/site-content";
 
 export function PageIntro({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
-  return <section className="page-intro"><p className="eyebrow">{eyebrow}</p><div className="page-intro-grid"><h1>{title}</h1><p>{text}</p></div><ArrowDownRight className="intro-arrow" /></section>;
+  return <section className="page-intro"><img className="page-intro-image" src={heroImage} alt="" aria-hidden="true" /><p className="eyebrow">{eyebrow}</p><div className="page-intro-grid"><h1>{title}</h1><p>{text}</p></div><ArrowDownRight className="intro-arrow" /></section>;
 }
 
 export function SectionHeading({ number, label, title }: { number: string; label: string; title: string }) {

@@ -77,6 +77,7 @@ function ArticlePage() {
   return (
     <PageShell>
       <header className="article-hero">
+        <figure className="article-hero-media"><img src={a.image} alt="" aria-hidden="true" width={1536} height={1024} /></figure>
         <nav aria-label="Breadcrumb"><Link to="/">Beranda</Link>/<Link to="/artikel">Artikel</Link>/<span>{a.category}</span></nav>
         <h1>{a.title}</h1>
         <p>{a.description}</p>

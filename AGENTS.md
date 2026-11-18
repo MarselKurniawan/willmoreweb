@@ -16,3 +16,4 @@
 - Store article posting times as explicit ISO timestamps and sort dated articles newest-first; undated legacy articles remain labeled unknown to avoid fabricating publishing history.
 - Import the user-selected homepage JPG and transparent logo PNG directly; preserve alpha and symbol pixels when recoloring logo lettering.
 - Keep the interactive homepage room banner in a dedicated component with stable photo-coordinate IDs, separate door-frame/leaf assets, measured doorway-centered entry animation, and motion-reduction support so reordering never misaligns transitions.
+- Keep the Clearance Lite-inspired editorial page treatment in shared page-level styles, preserving the homepage room banner's own composition and interactions.

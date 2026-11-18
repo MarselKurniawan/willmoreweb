@@ -3,7 +3,7 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "General Sans", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -369,3 +369,117 @@ h1, h2, h3 { text-transform: uppercase; }
 .material-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
 .material-links a { border: 1px solid currentColor; border-radius: 999px; padding: .5rem 1rem; font-size: .9rem; }
 @media (max-width: 800px) { .category-hero { grid-template-columns: 1fr; } }
+
+/* Clearance Lite-inspired editorial system for every page outside the room banner. */
+.page-intro {
+  isolation: isolate;
+  overflow: hidden;
+  height: min(78svh, 54rem);
+  min-height: 39rem;
+  padding: 8rem 4vw 5.5rem;
+  border: 0;
+  background: var(--surface-dark);
+  color: var(--on-dark);
+}
+.page-intro-image,
+.page-intro::before,
+.page-intro::after { position: absolute; pointer-events: none; }
+.page-intro-image { z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.page-intro::before {
+  content: "";
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, var(--surface-dark) 0%, color-mix(in oklab, var(--surface-dark) 78%, transparent) 48%, color-mix(in oklab, var(--surface-dark) 30%, transparent) 100%), linear-gradient(0deg, color-mix(in oklab, var(--surface-dark) 70%, transparent), transparent 70%);
+}
+.page-intro::after {
+  content: "";
+  z-index: 2;
+  left: -2%;
+  bottom: .65rem;
+  width: 104%;
+  height: 1.1rem;
+  background: var(--primary);
+  transform: rotate(-2deg);
+  transform-origin: left center;
+}
+.page-intro > .eyebrow,
+.page-intro-grid,
+.page-intro .intro-arrow { position: relative; z-index: 1; }
+.page-intro > .eyebrow { color: var(--primary); }
+.page-intro-grid { grid-template-columns: minmax(0, 1.65fr) minmax(16rem, .65fr); gap: 5vw; margin-top: auto; }
+.page-intro h1 { max-width: 18ch; font-size: 5rem; line-height: .9; font-weight: 600; }
+.page-intro-grid p { color: color-mix(in oklab, var(--on-dark) 80%, transparent); }
+.page-intro .intro-arrow { color: var(--primary); }
+
+.category-page { max-width: none; padding: 7rem 4vw 6rem; }
+.category-crumb { color: color-mix(in oklab, var(--on-dark) 70%, transparent); }
+.category-hero {
+  position: relative;
+  margin: 1.5rem -4vw 5rem;
+  padding: 2rem 4vw;
+  min-height: 36rem;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, .85fr);
+  gap: 6vw;
+  background: var(--surface-dark);
+  color: var(--on-dark);
+}
+.category-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: .5rem; background: var(--primary); }
+.category-hero h1 { max-width: 10ch; margin: 1rem 0; font-size: 5rem; line-height: .92; }
+.category-hero img { height: 32rem; object-fit: cover; filter: grayscale(.35); }
+.category-lead { max-width: 38rem; }
+.category-hero .complete-set-inline { color: color-mix(in oklab, var(--on-dark) 80%, transparent); }
+.category-page > h2,
+.category-page > .category-specs,
+.category-page > .category-list,
+.category-page > .category-faq { width: min(100%, 70rem); margin-right: auto; margin-left: auto; }
+.category-page > h2 { margin-top: 3.5rem; font-size: 1.8rem; }
+.category-page > .category-specs { border-collapse: collapse; }
+.category-page .category-faq details { border-color: var(--border); }
+
+.article-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 70svh;
+  max-width: none;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+  padding: 10rem 4vw 5rem;
+  background: var(--surface-dark);
+  color: var(--on-dark);
+}
+.article-hero-media { position: absolute; z-index: -2; inset: 0; overflow: hidden; margin: 0; padding: 0; }
+.article-hero-media img { width: 100%; height: 100%; max-height: none; object-fit: cover; filter: grayscale(1); }
+.article-hero::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, color-mix(in oklab, var(--surface-dark) 94%, transparent), color-mix(in oklab, var(--surface-dark) 45%, transparent)), linear-gradient(0deg, var(--surface-dark), transparent 75%); }
+.article-hero > :not(.article-hero-media) { position: relative; z-index: 1; }
+.article-hero nav { color: color-mix(in oklab, var(--on-dark) 75%, transparent); }
+.article-hero h1 { max-width: 20ch; font-size: 4.5rem; }
+.article-hero p { color: color-mix(in oklab, var(--on-dark) 80%, transparent); }
+.article-hero .article-date { background: color-mix(in oklab, var(--surface-dark) 78%, transparent); color: var(--on-dark); border-color: color-mix(in oklab, var(--on-dark) 28%, transparent); }
+.article-cover { display: none; }
+.article-toc { border-color: var(--primary); }
+.article-toc h2 { color: var(--foreground); }
+.article-card h2 { font-weight: 600; }
+.article-card .img-wrap { background: var(--surface-dark); }
+.article-card img { filter: grayscale(.35); }
+.article-card:hover img { filter: grayscale(0); }
+.faq-section { background: var(--surface-dark); color: var(--on-dark); }
+.faq-section details p { color: color-mix(in oklab, var(--on-dark) 72%, transparent); }
+.faq-section details { border-color: color-mix(in oklab, var(--on-dark) 25%, transparent); }
+.faq-section details:last-child { border-color: color-mix(in oklab, var(--on-dark) 25%, transparent); }
+.primary-button { transition: background-color .2s ease, transform .2s ease; }
+.primary-button:hover { background: var(--accent); transform: translateY(-2px); }
+
+@media (max-width: 800px) {
+  .page-intro { height: min(75svh, 42rem); min-height: 34rem; padding: 7rem 1.25rem 4.5rem; }
+  .page-intro-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .page-intro h1 { max-width: 16ch; font-size: 3rem; }
+  .page-intro .intro-arrow { top: 7rem; right: 1.25rem; }
+  .category-page { padding: 6rem 1.25rem 4rem; }
+  .category-hero { margin: 1.5rem -1.25rem 3.5rem; padding: 1.5rem 1.25rem 2rem; min-height: auto; gap: 2rem; }
+  .category-hero h1 { font-size: 3.35rem; }
+  .category-hero img { height: auto; aspect-ratio: 4 / 5; }
+  .article-hero { min-height: 62svh; padding: 8rem 1.25rem 3.5rem; }
+  .article-hero h1 { max-width: 22ch; font-size: 3rem; }
+}
