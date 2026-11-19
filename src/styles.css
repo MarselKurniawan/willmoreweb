@@ -435,6 +435,10 @@ h1, h2, h3 { text-transform: uppercase; }
 .category-page > h2 { margin-top: 3.5rem; font-size: 1.8rem; }
 .category-page > .category-specs { border-collapse: collapse; }
 .category-page .category-faq details { border-color: var(--border); }
+.category-page .category-faq summary { display: flex; justify-content: space-between; gap: 1.5rem; }
+.category-page .category-faq summary::after { content: "+"; flex: 0 0 auto; font-size: 1.4rem; font-weight: 400; }
+.category-page .category-faq details[open] summary::after { content: "−"; }
+.category-page .category-faq p { margin: 0 0 1rem; }
 
 .article-hero {
   position: relative;

@@ -1,9 +1,10 @@
 # Roadmap
 
 - [x] Match all non-home-banner pages to the Clearance Lite visual reference and use General Sans
+- [x] Verify visual consistency and fix category FAQ question layout
 
-- [ ] Reorder homepage rooms and use the four supplied door PNGs
-- [ ] Smooth the doorway entry animation and verify forward/back navigation
+- [x] Reorder homepage rooms and use the four supplied door PNGs
+- [x] Smooth the doorway entry animation and verify forward/back navigation
 - [x] Add the five supplied homepage rooms in order with a door-opening slide transition
 - [x] Verify homepage navigation, animation, and mobile layout
 
